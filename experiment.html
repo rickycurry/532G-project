@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" href="./style.css">
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
 
 <body>
@@ -749,5 +750,42 @@
       .initialize(container, 500, 350, [60, 70], 2);
 
     renderer.render(scene);
+
+    // access the path (this works for one line but probably not multi-line charts
+    //  -- could do a selectAll and then iterate)
+    const lineGroup = d3.select('.role-mark');
+    const linePath = lineGroup.select('path');
+    const pathString = linePath.attr('d');
+    const strokeWidth = linePath.attr('stroke-width');
+    const stroke = linePath.attr('stroke');
+
+    const subPathVertexStrings = pathString.slice(1).split('L');
+
+    const replacementSubPathStrings = [];
+    for (let i = 0; i < subPathVertexStrings.length - 1; i++) {
+      replacementSubPathStrings.push(`M${subPathVertexStrings[i]}L${subPathVertexStrings[i+1]}`);
+    }
+
+    // This keeps some of the other attributes from the original path
+    //  (e.g. aria-label, role, etc) in the first path -- could cause
+    //  problems, so consider removing the original path first, or adding
+    //  these attributes to all path segments.
+    lineGroup.selectAll("path")
+      .data(replacementSubPathStrings)
+      .join("path")
+        .attr("d", d => d)
+        .attr("stroke-width", strokeWidth)
+        .attr("stroke", stroke);
+
+    // Add circles where the actual data points would be. Currently they're
+    //  added to the same group "lineGroup" that contains the line segments,
+    //  but we could put them in a separate group if desired.
+    lineGroup.selectAll("circle")
+      .data(subPathVertexStrings.map((T) => T.split(',')))
+      .join("circle")
+        .attr("cx", d => Number(d[0]))
+        .attr("cy", d => Number(d[1]))
+        .attr("r", 3)
+        .attr("fill", "#3af");
   </script>
 </body>
