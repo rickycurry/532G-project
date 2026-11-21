@@ -7,6 +7,7 @@
 <body>
   <div id="view"></div>
   <script type="text/javascript">
+    const json_id = "8819"
     serializedSceneJSON = {
       "marktype": "group",
       "name": "root",
@@ -787,5 +788,18 @@
         .attr("cy", d => Number(d[1]))
         .attr("r", 3)
         .attr("fill", "#3af");
+
+    // Write to file
+    const svg = d3.select(".role-frame").html();
+    console.log(svg);
+    const blob = new Blob([svg], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${json_id}_rendered.txt`;
+    a.click();
+    
+    URL.revokeObjectURL(url);
   </script>
 </body>
