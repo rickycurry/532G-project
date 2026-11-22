@@ -1,0 +1,53 @@
+{
+  "Over the last ten years the general trend of value for Exports has trended upwards.": [
+    "<path aria-label=\"Year: Dec 31, 2006; Exports: 16.7\" role=\"graphics-symbol\" aria-roledescription=\"line mark\" d=\"M0,104.571L19.984,97.143\" stroke=\"#ccebc5\" stroke-width=\"2\" />",
+    "<path d=\"M19.984,97.143L40.022,124\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M40.022,124L60.005,90.857\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M60.005,90.857L79.989,71.429\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M79.989,71.429L99.973,63.429\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M99.973,63.429L120.011,49.143\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M120.011,49.143L139.995,44\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M139.995,44L159.978,45.714\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M159.978,45.714L179.962,20\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<path d=\"M179.962,20L200,4\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<circle cx=\"0\" cy=\"104.571\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"19.984\" cy=\"97.143\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"40.022\" cy=\"124\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"60.005\" cy=\"90.857\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"79.989\" cy=\"71.429\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"99.973\" cy=\"63.429\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"120.011\" cy=\"49.143\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"139.995\" cy=\"44\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"159.978\" cy=\"45.714\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"179.962\" cy=\"20\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"200\" cy=\"4\" r=\"3\" fill=\"#3af\" />"
+  ],
+  "The number  of exports  from Great Britain more than doubled by 2017.": [
+    "<text text-anchor=\"middle\" transform=\"translate(0,10)\" font-family=\"sans-serif\" font-size=\"13px\" font-weight=\"bold\" fill=\"#fff\" opacity=\"1\"><tspan>Value of motor vehicles imported and exported</tspan><tspan x=\"0\" dy=\"15\">in the United Kingdom (UK) from 2007 to 2017</tspan><tspan x=\"0\" dy=\"15\">(in billion GBP)</tspan></text>",
+    "<text text-anchor=\"middle\" transform=\"translate(-23.020815280171313,100) rotate(-90) translate(0,-2)\" font-family=\"sans-serif\" font-size=\"11px\" font-weight=\"bold\" fill=\"#fff\" opacity=\"1\">Exports</text>",
+    "<circle cx=\"0\" cy=\"104.571\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"19.984\" cy=\"97.143\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"40.022\" cy=\"124\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"60.005\" cy=\"90.857\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"79.989\" cy=\"71.429\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"99.973\" cy=\"63.429\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"120.011\" cy=\"49.143\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"139.995\" cy=\"44\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"159.978\" cy=\"45.714\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"179.962\" cy=\"20\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"200\" cy=\"4\" r=\"3\" fill=\"#3af\" />"
+  ],
+  "From 2009 to 2010 is the year with the largest increase in percentage of exports.": [
+    "<path d=\"M40.022,124L60.005,90.857\" stroke-width=\"2\" stroke=\"#ccebc5\" />"
+  ],
+  "2008 to 2009 is the year with the largest decrease in percentage of motor vehicle exports.": [
+    "<path d=\"M19.984,97.143L40.022,124\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<circle cx=\"19.984\" cy=\"97.143\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"40.022\" cy=\"124\" r=\"3\" fill=\"#3af\" />"
+  ],
+  "From 2014 to 2015 was they year with the least amount of change in percent of motor vehicles exported.": [
+    "<path d=\"M139.995,44L159.978,45.714\" stroke-width=\"2\" stroke=\"#ccebc5\" />",
+    "<circle cx=\"139.995\" cy=\"44\" r=\"3\" fill=\"#3af\" />",
+    "<circle cx=\"159.978\" cy=\"45.714\" r=\"3\" fill=\"#3af\" />"
+  ]
+}
