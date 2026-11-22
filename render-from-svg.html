@@ -212,6 +212,10 @@
         </g>
     </svg>
     <script type="text/javascript">
-        
+        const testItem = "<circle cx=\"200\" cy=\"4\" r=\"3\" fill=\"#3af\" />"
+        const containsMatch = d3.select(".role-mark").selectChildren(function() {
+            return this.innerHTML.includes(testItem);
+        });
+        containsMatch.classed("highlighted", true);
     </script>
 </body>
