@@ -5,3 +5,8 @@ html {
 .highlighted {
   stroke: #fff;
 }
+
+p {
+  color: #fff;
+  font-family: sans-serif;
+}
