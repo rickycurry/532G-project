@@ -212,10 +212,49 @@
         </g>
     </svg>
     <script type="text/javascript">
+        /**
+         * Parse the mapping string describing an emphasis target.
+         * 
+         * @param {String} string - The string describing an emphasis target.
+         *  Note that the current implementation makes some assumptions about
+         *  the format of the string, such as starting with '<' and ending with
+         *  ' />', being space-separated, and having each 'value' be wrapped
+         *  in escaped double-quotes.
+         * @returns {Object} An object acting as a key-value map. There should
+         *  always be an entry with the key "type" whose value will be an SVG
+         *  element type (e.g. "circle", "path", etc.)
+         */
+        function stringToKeyValueMap(string) {
+            const VALID_KEYS = ['d', 'cx', 'cy' /* there will be some other ones for bar charts */]
+
+            const split = string.split(" ");
+            const ret = {type: split[0].slice(1)} // remove leading '<'
+            for (let i of split.slice(1, -1)) { // leave off the last one because it's '/>"'
+                const innerSplit = i.split("=");
+                if (VALID_KEYS.includes(innerSplit[0])) {
+                    ret[innerSplit[0]] = innerSplit[1].slice(1, -1);
+                }
+            }
+            return ret;
+        };
+
+
         const testItem = "<circle cx=\"200\" cy=\"4\" r=\"3\" fill=\"#3af\" />"
-        const containsMatch = d3.select(".role-mark").selectChildren(function() {
-            return this.innerHTML.includes(testItem);
+        const kvm = stringToKeyValueMap(testItem);
+        const svgItem = d3.selectAll(kvm.type).select(function() {
+            // Iterate over all the elements of type kvm.type (e.g. circle, path, etc.)
+            // `this` is a DOM element.
+            for (const [k, v] of Object.entries(kvm)) {
+                if (k === 'type') {
+                    continue;
+                }
+                if (this.getAttribute(k) !== v) {
+                    return null;
+                }
+            }
+            return this;
         });
-        containsMatch.classed("highlighted", true);
+        console.log(svgItem);
+        svgItem.classed('highlighted', true);
     </script>
 </body>
