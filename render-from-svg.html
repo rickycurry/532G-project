@@ -5,7 +5,6 @@
 </head>
 
 <body>
-    <div id="view"></div>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks"
         width="1000" height="700" viewBox="0 0 500 350">
         <g fill="none" stroke-miterlimit="10" transform="translate(60,70)">
@@ -211,11 +210,7 @@
             </g>
         </g>
     </svg>
-    <script type="text/javascript">
-        const testItem = "<circle cx=\"200\" cy=\"4\" r=\"3\" fill=\"#3af\" />"
-        const containsMatch = d3.select(".role-mark").selectChildren(function() {
-            return this.innerHTML.includes(testItem);
-        });
-        containsMatch.classed("highlighted", true);
+    <p id="caption"></p>
+    <script type="text/javascript" src="render-from-svg.js" async>
     </script>
 </body>
