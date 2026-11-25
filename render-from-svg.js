@@ -86,7 +86,6 @@ async function main() {
           }).classed('deemphasized', true);
 
           d3.selectAll('.mark').filter(function() {
-            console.log(this.classList);
             return !this.classList.contains(markClass);
           }).classed('deemphasized', true);
         })
