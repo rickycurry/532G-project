@@ -47,6 +47,8 @@ async function main() {
 
   const mappingJson = await getMapping(id);
 
+  d3.select(".role-mark").selectChildren().classed("mark", true);
+
   // Markup the caption with <span> tags, assigning IDs to each claim.
   for (const [index, [subCaption, _]] of Object.entries(mappingJson).entries()) {
     const claimId = `claim-${index}`;
@@ -79,12 +81,22 @@ async function main() {
       // Add interaction listeners
       d3.select(`#${claimId}`)
         .on("mouseenter", function () {
-          d3.select(this).classed("highlighted", true);
-          d3.selectAll(`.${markClass}`).classed("highlighted", true);
+          d3.selectAll('.interactible').filter(function() {
+            return this.id !== claimId;
+          }).classed('deemphasized', true);
+
+          d3.selectAll('.mark').filter(function() {
+            return !this.classList.contains(markClass);
+          }).classed('deemphasized', true);
         })
         .on("mouseleave", function () {
-          d3.select(this).classed("highlighted", false);
-          d3.selectAll(`.${markClass}`).classed("highlighted", false);
+          d3.selectAll('.interactible')
+            .classed('deemphasized', false)
+            .classed('regular', true);
+            
+          d3.selectAll('.mark')
+          .classed('deemphasized', false)
+          .classed('regular', true);
         });
     }
   }
